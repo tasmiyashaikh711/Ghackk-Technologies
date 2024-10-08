@@ -9,9 +9,6 @@
     <!-- Preload critical image -->
     <link rel="preload" href="images/header-image.webp" as="image">
 
-    <!-- Preconnect to improve load time for external resources (if needed) -->
-    <!-- <link rel="preconnect" href="https://example.com"> -->
-
     <!-- Inline critical CSS -->
     <style>
         /* Critical CSS for above-the-fold content */
@@ -55,9 +52,16 @@
         <h2>How Webtoons Influence K-pop</h2>
         <p>Webtoons and K-pop have a symbiotic relationship, with both industries...</p>
 
-        <!-- Lazy loading images -->
-        <img src="images/placeholder.jpg" data-src="images/kpop-1.webp" alt="A K-pop star in a webtoon style" class="lazy" loading="lazy">
-        <img src="images/placeholder.jpg" data-src="images/kpop-2.webp" alt="An artistic rendition of a K-pop group" class="lazy" loading="lazy">
+        <!-- Lazy loading images with picture for better support -->
+        <picture>
+            <source srcset="images/kpop-1.webp" type="image/webp">
+            <img src="images/kpop-1.jpg" alt="A K-pop star in a webtoon style" class="lazy" loading="lazy">
+        </picture>
+
+        <picture>
+            <source srcset="images/kpop-2.webp" type="image/webp">
+            <img src="images/kpop-2.jpg" alt="An artistic rendition of a K-pop group" class="lazy" loading="lazy">
+        </picture>
 
         <button id="loadMore">Load More Content</button>
     </section>
