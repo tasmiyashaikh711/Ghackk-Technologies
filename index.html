@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the connection between Webtoons and K-pop and how these two Korean media industries impact each other.">
+    <title>Webtoon Kpop: How these Two Korean Media Impact Each Other</title>
+
+    <!-- Preload critical image -->
+    <link rel="preload" href="images/header-image.webp" as="image">
+
+    <!-- Preconnect to improve load time for external resources (if needed) -->
+    <!-- <link rel="preconnect" href="https://example.com"> -->
+
+    <!-- Inline critical CSS -->
+    <style>
+        /* Critical CSS for above-the-fold content */
+        header {
+            height: 300px;
+            background: url('images/header-image.webp') no-repeat center center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        /* Add basic styling for lazy-loaded images */
+        .lazy {
+            min-height: 150px;
+            background-color: #f4f4f4;
+        }
+
+        /* Inline font performance improvement */
+        @font-face {
+            font-family: 'Arial';
+            font-display: swap;
+        }
+    </style>
+    
+    <!-- Link to external stylesheet for non-critical CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>Webtoon & K-pop Connection</h1>
+    </header>
+
+    <section>
+        <h2>How Webtoons Influence K-pop</h2>
+        <p>Webtoons and K-pop have a symbiotic relationship, with both industries...</p>
+
+        <!-- Lazy loading images -->
+        <img src="images/placeholder.jpg" data-src="images/kpop-1.webp" alt="A K-pop star in a webtoon style" class="lazy" loading="lazy">
+        <img src="images/placeholder.jpg" data-src="images/kpop-2.webp" alt="An artistic rendition of a K-pop group" class="lazy" loading="lazy">
+
+        <button id="loadMore">Load More Content</button>
+    </section>
+
+    <!-- Defer JavaScript loading -->
+    <script src="scripts/lazyLoad.js" defer></script>
+    <script src="scripts/loadMore.js" defer></script>
+</body>
+</html>
